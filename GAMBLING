@@ -1,0 +1,25 @@
+#include <random>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <chrono>
+#include <thread>
+using namespace std;
+int money = 2;
+void gambling(){
+    while (money > 0){
+        srand(time(0));
+        vector<string> gamblecore = {"🍒","🍋","💎","💰","🃏","🔔","🎰 ",};
+        int diddylen = gamblecore.size();
+        int x = rand() % diddylen;
+        int y = rand() % diddylen;
+        int z = rand() % diddylen;
+        cout << gamblecore[x] << gamblecore[y] << gamblecore[z] << endl;
+        money = money - 1;
+    }
+}
+int main() {
+    bool urmom = true;
+    gambling();
+    return 0;
+}
